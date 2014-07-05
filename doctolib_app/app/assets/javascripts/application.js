@@ -13,5 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require ./public/boostrap.min
-//= require ./public/boostrap
+//= require ./public/bootstrap.min
+//= require ./public/bootstrap

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class ="row">
+    <div class="col-lg-6 col-xs-12">
+      <%= notice %>
+      <%= form_for :professionnel, url: public_professionnels_path do |f| %>
+        <p>
+          <%= f.label :Nom %><br>
+          <%= f.text_field :last_name %>
+        </p>
+       
+        <p>
+          <%= f.label :Prenom %><br>
+          <%= f.text_field :first_name %>
+        </p>
+
+         <p>
+          <%= f.label :Adresse %><br>
+          <%= f.text_field :adresse %>
+        </p>
+         <p>
+          <%= f.label :Ville %><br>
+          <%= f.text_field :city %>
+        </p>
+         <p>
+          <%= f.label :Pays %><br>
+          <%= f.text_field :country %>
+        </p>
+        <p>
+          <%= f.label :Specialite %><br>
+        <%= f.select :specialite, options_for_select(['dentiste','medecin-generaliste','gynecologue','ophtalmologue','orl-oto-rhino-laryngologie','dermatologue','dermatologue','pediatre','masseur-kinesitherapeute'])
+          %>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+
+
+    </div>
+        <div class="col-lg-6 col-xs-12">
+                <hr>
+                 <%= image_tag('public/docteur.png') %>
+                <hr>
+
+
+       </div>
+  </div>
+</div>

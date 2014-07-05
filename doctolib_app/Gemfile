@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+ gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -36,3 +36,45 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Mongoid
+gem 'mongoid', '~> 4.0.0.beta2'
+gem 'bson_ext'
+gem 'mongoid-grid_fs', git: 'https://github.com/ahoward/mongoid-grid_fs.git'
+gem 'mongoid_search', git: 'https://github.com/mauriciozaffari/mongoid_search.git'
+
+# Assets
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'font-awesome-sass-rails', '~> 3.0.2.2'
+gem 'gon', '~> 5.0.4'
+gem 'jquery-turbolinks', '~> 2.0.2'
+gem 'non-stupid-digest-assets', '~> 1.0.4'
+gem 'nprogress-rails', '~> 0.1.3.0'
+
+# Templates
+gem 'slim', '~> 2.0.2'
+
+# Authentification
+gem 'devise', '~> 3.2.4'
+
+# Uploads
+gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave-mongoid', '~> 0.7.1', :require => 'carrierwave/mongoid'
+
+# Image modifications
+gem 'mini_magick', '~> 3.7.0'
+
+# Pagination
+# gem 'kaminari', '~> 0.15.1'
+gem 'kaminari', git: 'https://github.com/amatsuda/kaminari.git'
+
+# Html editor
+gem 'ckeditor', '~> 4.0.11'
+
+#rails geo
+gem 'jquery-ui-rails'
+
+#redis pour le panier d'achat
+gem 'redis', '~> 3.1.0'
+
+#random_string 
+gem 'randomstring', '~> 1.0.1'

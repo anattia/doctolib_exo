@@ -1,0 +1,41 @@
+
+<div class="col-lg-12 col-xs-12 col-md-12 responsive-table-line">
+	<table class="table table-bordered table-condensed table-body-center" >
+	<thead>
+	<tr>
+	<th>Nom</th>
+	<th>Prénom</th>
+	<th>Ville</th>
+	<th>Pays</th>
+	<th>Specialite</th>
+
+
+	</tr>
+	</thead>
+	<tbody>		
+	<% @professionnels.each do |p| %>
+		<tr>
+
+			<td data-title="Droit"><%= p.last_name%></td>
+			<td data-title="Valeur alphanumérique"><%= p.first_name %></td>
+			<td data-title="Valeur octale"><%= p.city %></td>
+			<td data-title="Valeur binaire"><%= p.country %></td>
+			<td data-title="Valeur binaire"><%= p.specialite%></td>
+			<td data-title="Droit">
+				<%= link_to 'Supprimer', public_professionnel_path(p), method: :delete, data: { confirm: 'Êtes vous sure  de supprimer cette utilisateur ?' } %> </td>
+			
+
+		
+		</tr>
+	<% end %>
+	</tbody>
+	</table>
+	</div>
+
+</div>
+</div>
+</div>
+
+<br/>
+
+</div>

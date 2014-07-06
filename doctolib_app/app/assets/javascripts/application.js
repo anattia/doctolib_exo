@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require ./public/bootstrap.min
 //= require ./public/bootstrap
+//= require ./public/maps

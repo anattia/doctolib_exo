@@ -27,17 +27,20 @@
                 </ul>
 
             </div>
-
+         
+                 
             <div class="col-lg-4">
                 <div class="well">
                     <h4>Recherche</h4>
+                       <%= form_tag('/resultat', :method => :get, :id=>"search_mini_form") do -%>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder ="Trouver un medecin">
+                        <input type="text" class="form-control" placeholder ="Trouver un medecin" value="<%= params[:q]%>" name="q">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
+                            <button class="btn btn-default" type="submit">
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </span>
+                        <% end %>
                     </div>
                     <!-- /input-group -->
                 </div>
@@ -71,13 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- /well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Bootstrap's default wells work great for side widgets! What is a widget anyways...?</p>
-                </div>
-                <!-- /well -->
-            </div>
+                    </div>
         </div>
 
         <hr>

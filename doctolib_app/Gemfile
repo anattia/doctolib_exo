@@ -78,3 +78,6 @@ gem 'redis', '~> 3.1.0'
 
 #random_string 
 gem 'randomstring', '~> 1.0.1'
+
+#Google Maps
+gem 'gmaps4rails'

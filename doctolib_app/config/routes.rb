@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 namespace :public, path: "/" do
     
     #routes des pages
-  
+   get "resultat"  => "pages#resulta", as: :result
     root 'pages#home'
     resources :users
     resources :professionnels

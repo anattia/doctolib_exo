@@ -4,37 +4,37 @@
       <%= notice %>
       <%= form_for :professionnel, url: public_professionnels_path do |f| %>
         <p>
-          <%= f.label :Nom %><br>
-          <%= f.text_field :last_name %>
+          <%= f.label :Nom, "Nom*"%><br>
+          <%= f.text_field :last_name , :required => true %>
         </p>
        
         <p>
-          <%= f.label :Prenom %><br>
-          <%= f.text_field :first_name %>
+          <%= f.label :Prenom, 'Prenom*' %><br>
+          <%= f.text_field :first_name, :required => true %>
         </p>
 
          <p>
-          <%= f.label :Adresse %><br>
-          <%= f.text_field :adresse %>
+          <%= f.label :Adresse, 'Adresse*' %><br>
+          <%= f.text_field :adresse, :required => true %>
         </p>
          <p>
-          <%= f.label :Ville %><br>
-          <%= f.text_field :city %>
+          <%= f.label :Ville, 'Ville*' %><br>
+          <%= f.text_field :city, :required => true %>
         </p>
          <p>
-          <%= f.label :Pays %><br>
-          <%= f.text_field :country %>
+          <%= f.label :Pays, 'Pays*' %><br>
+          <%= f.text_field :country, :required => true %>
         </p>
         <p>
-          <%= f.label :Specialite %><br>
-        <%= f.select :specialite, options_for_select(['dentiste','medecin-generaliste','gynecologue','ophtalmologue','orl-oto-rhino-laryngologie','dermatologue','dermatologue','pediatre','masseur-kinesitherapeute'])
+          <%= f.label :Specialite, 'Specialite*' %><br>
+        <%= f.select :specialite, options_for_select(['Dentiste','Medecin-generaliste','Gynecologue','Ophtalmologue','Orl-oto-rhino-Laryngologie','Podologue','Dermatologue','Pediatre','Masseur-kinesitherapeute'])
           %>
         <p>
-          <%= f.submit %>
+          <%= f.submit%>
         </p>
       <% end %>
 
-
+    <p> Tous les champs * sont requis </p>
     </div>
         <div class="col-lg-6 col-xs-12">
                 <hr>

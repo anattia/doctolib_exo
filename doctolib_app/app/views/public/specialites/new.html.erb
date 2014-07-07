@@ -1,0 +1,32 @@
+<div class="container">
+  <div class ="row">
+    <div class="col-lg-6 col-xs-12">
+      <% if notice %>
+      <div class="notice ">
+
+          <p class="notice">  <%= notice %> </p>
+
+      </div>
+      <% end %>
+      <%= form_for :specialite, url: public_specialites_path do |f| %>
+      
+        <p>
+          <%= f.label :Specialite, 'Specialite*' %><br>
+        <%= f.select :name, options_for_select(['Dentiste','Medecin-generaliste','Gynecologue','Ophtalmologue','Orl-oto-rhino-Laryngologie','Podologue','Dermatologue','Pediatre','Masseur-kinesitherapeute'])
+          %>
+        <p>
+          <%= f.submit%>
+        </p>
+      <% end %>
+
+    <p> Tous les champs * sont requis </p>
+    </div>
+        <div class="col-lg-6 col-xs-12">
+                <hr>
+                 <%= image_tag('public/docteur.png') %>
+                <hr>
+
+
+       </div>
+  </div>
+</div>

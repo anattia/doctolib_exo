@@ -1,7 +1,7 @@
 class Public::PagesController < Public::PublicController
 	before_action :find_prof
 	def home
-	
+	@specialites = Specialite.all
 
 	end
 

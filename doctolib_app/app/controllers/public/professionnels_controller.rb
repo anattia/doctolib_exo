@@ -35,14 +35,14 @@ class Public::ProfessionnelsController < Public::PublicController
 
 
 		def find_professionnel
-  		@professionnel = Professionnel.find(params[:id]) if params[:id]
-  	end
+  			@professionnel = Professionnel.find(params[:id]) if params[:id]
+  		end
 
 		private
 
 		def product_params
     		params.require(:professionnel).permit!
-  	end
+  		end
 
   	
 

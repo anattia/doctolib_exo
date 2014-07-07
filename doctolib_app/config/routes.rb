@@ -7,8 +7,7 @@ namespace :public, path: "/" do
     root 'pages#home'
     resources :users
     resources :professionnels
-    resources :categories
-
+    resources :specialites
   end
   
   namespace :admin do

@@ -13,8 +13,15 @@ namespace :public, path: "/" do
   namespace :admin do
 
 
+    get 'products/exemples'
+    get 'products/:product_id/create_from_exemple' => 'products#create_from_exemple', as: :product_from_exemple
+    post 'products/destroy_list'
+    
     resources :administrators
     resources :users
+    resources :products
+    resources :categories 
+    resources :orders
     
     root 'pages#home'
 

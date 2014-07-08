@@ -1,58 +1,47 @@
- <div class="container">
-
-        <div class="row">
-            <div class="col-lg-8">
-
-                <!-- blog entry -->
-                <h1><a href="#">Application crée pour docotlib.fr</a>
-                </h1>
-                
-                <hr>
-                 <%= image_tag('public/docteur.png') %>
-                <hr>
-                <p>Bienveu sur mon application crée pour démontrer mes capacités ! 
-                </p>
-              
-
-            </div>
-         
-                 
-            <div class="col-lg-4">
-                <div class="well">
-                    <h4>Recherche</h4>
-                       <%= form_tag('/resultat', :method => :get, :id=>"search_mini_form") do -%>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder ="Trouver un medecin" value="<%= params[:q]%>" name="q">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-                        <% end %>
-                    </div>
-                    <!-- /input-group -->
-                </div>
-                <!-- /well -->
-                <div class="well">
-                    <h4>Par spécialité</h4>
-                    <p> Vous pouvez ajouter des spécialités dans l'onglet ajout d'une spécialité </p>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <%= @specialites.each do |f| %>
-                                <p style="color:#2FA4E7;"> <%= f.name %> </p>
-                                
-                                <% end %> 
-                                
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                         
-                        </div>
-                    </div>
-                </div>
-                    </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <!-- blog entry -->
+      <h1><a href="#">Application crée pour docotlib.fr</a>
+      </h1>
+      <hr>
+      <%= image_tag('public/docteur.png') %>
+      <hr>
+      <p>Bienvenu sur mon application crée pour démontrer mes capacités ! 
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <div class="well">
+        <h4>Recherche</h4>
+        <%= form_tag('/resultat', :method => :get, :id=>"search_mini_form") do -%>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder ="Trouver un medecin" value="<%= params[:q]%>" name="q">
+          <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+          </button>
+          </span>
+        <% end %>
         </div>
-
-        <hr>
- </div>
+        <!-- /input-group -->
+      </div>
+      <!-- /well -->
+      <div class="well">
+        <h4>Par spécialité</h4>
+        <p> Vous pouvez ajouter des spécialités dans l'onglet ajout d'une spécialité ! </p>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul class="list-unstyled">
+              <%= @specialites.each do |f| %>
+              <p style="color:#2FA4E7;"> <%= f.name %> </p>
+              <% end %> 
+            </ul>
+          </div>
+          <div class="col-lg-6">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
